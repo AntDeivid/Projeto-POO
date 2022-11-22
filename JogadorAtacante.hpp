@@ -16,4 +16,4 @@ class JogadorAtacante : public Jogador {
 
 };
 
-#endif
+#endif // JOGADOR_ATACANTE_HPP
