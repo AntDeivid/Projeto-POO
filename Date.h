@@ -19,7 +19,7 @@ class Date {
         int getAno() { return this->ano; }
         void setAno(int ano) { this->ano = ano; }
 
-        void print() { cout << this->getDia() << "/" << this->getMes() << "/" << this->getAno() << endl; }
+        void print() { std::cout << this->getDia() << "/" << this->getMes() << "/" << this->getAno() << std::endl; }
 
 };
 #endif // DATE_H

@@ -20,7 +20,7 @@ class Time : public Jogador{
         int somaVitorias();
         int somaDerrotas();
         int somaEmpates();
-        Jogador insJogadores(Jogador *jogador);
+        void insJogadores(Jogador *jogador);
 };
 
 #endif // TIME_HPP
