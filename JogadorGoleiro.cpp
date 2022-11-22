@@ -1,4 +1,4 @@
-#include "JogadorGoleiro.h"
+#include "JogadorGoleiro.hpp"
 #include <iostream>
 using namespace std;
 

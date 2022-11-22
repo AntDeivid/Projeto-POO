@@ -1,6 +1,6 @@
 #ifndef JOGADOR_GOLEIRO_H
 #define JOGADOR_GOLEIRO_H
-#include "Jogador.h"
+#include "Jogador.hpp"
 #include <iostream>
 
 
