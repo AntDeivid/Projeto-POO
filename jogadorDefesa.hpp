@@ -2,6 +2,8 @@
 #define JOGADORDEFESA_H
 
 #include <iostream>
+#include <string>
+#include "Jogador.hpp"
 
 class JogadorDefesa : public Jogador
 {
@@ -9,7 +11,7 @@ class JogadorDefesa : public Jogador
         int cobertura;
         int desarme;
     public:
-        JogadorDefesa(String, int, int, int, int, int, int);
+        JogadorDefesa(std::String, int, int, int, int, int, int);
         int getHabilidade();
 };
 
