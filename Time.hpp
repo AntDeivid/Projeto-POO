@@ -1,5 +1,5 @@
-#ifndef TIME_H
-#define TIME_H
+#ifndef TIME_HPP
+#define TIME_HPP
 #include "Jogador.hpp"
 #include <iostream>
 
@@ -23,4 +23,4 @@ class Time : public Jogador{
         void insJogadores(Jogador *jogador);
 };
 
-#endif // TIME_H
+#endif // TIME_HPP

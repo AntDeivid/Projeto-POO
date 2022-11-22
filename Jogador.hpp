@@ -20,4 +20,5 @@ class Jogador {
         void somaGol();
 
 };
-#endif
+
+#endif // JOGADOR_HPP

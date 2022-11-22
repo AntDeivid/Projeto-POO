@@ -1,5 +1,5 @@
-#ifndef JOGADORDEFESA_H
-#define JOGADORDEFESA_H
+#ifndef JOGADORDEFESA_HPP
+#define JOGADORDEFESA_HPP
 #include "Jogador.hpp"
 #include <iostream>
 #include <string>
@@ -16,4 +16,4 @@ class JogadorDefesa : public Jogador
 };
 
 
-#endif
+#endif //JOGADOR_DEFESA_HPP

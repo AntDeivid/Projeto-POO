@@ -1,5 +1,5 @@
-#ifndef JOGADOR_GOLEIRO_H
-#define JOGADOR_GOLEIRO_H
+#ifndef JOGADOR_GOLEIRO_HPP
+#define JOGADOR_GOLEIRO_HPP
 #include "Jogador.hpp"
 #include <iostream>
 
@@ -18,4 +18,4 @@ class Goleiro: public Jogador{
         int getHabilidade();
 };
 
-#endif // JOGADOR_GOLEIRO_H
+#endif // JOGADOR_GOLEIRO_HPP
