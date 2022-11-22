@@ -11,5 +11,5 @@ JogadorAtacante::JogadorAtacante(string nome, int idade, int habilidade, int gol
 }
 
 int JogadorAtacante::getHabilidade() {
-    return  ((Jogador::getHabilidade()*5) + (this->velocidade*2) + (this->tecnica*3))/10
+    return  ((Jogador::getHabilidade()*5) + (this->velocidade*2) + (this->tecnica*3))/10;
 }
