@@ -11,8 +11,8 @@ class Goleiro: public Jogador{
     
     public:
         Goleiro(std::string nome, int idade, int habilidade, int gols, int camisa, int reflexos, float altura);
-        int getIdade();
-        void setIdade(int idade);
+        int getReflexos();
+        void setReflexos(int reflexos);
         float getAltura();
         void setAltura(float altura);
         int getHabilidade();
