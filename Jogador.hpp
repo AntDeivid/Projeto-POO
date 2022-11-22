@@ -1,3 +1,5 @@
+#ifndef JOGADOR_HPP
+#define JOGADOR_HPP
 #include <iostream>
 #include <string>
 
@@ -17,3 +19,4 @@ class Jogador {
         void somaGol();
 
 };
+#endif
