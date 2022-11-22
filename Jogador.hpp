@@ -1,3 +1,5 @@
+#ifndef JOGADOR_HPP
+#define JOGADOR_HPP
 #include <iostream>
 #include <string>
 
@@ -13,8 +15,9 @@ class Jogador {
 
         std::string getNome();
         void setNome(std::string);
-        int getHabilidade();
+        virtual int getHabilidade() = 0;
         int getGols();
         void somaGol();
 
 };
+#endif
