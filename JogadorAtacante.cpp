@@ -4,7 +4,8 @@
 
 using namespace std;
 
-JogadorAtacante::JogadorAtacante(string nome, int idade, int habilidade, int gols, int camisa, int velocidade, int tecnica) {
+JogadorAtacante::JogadorAtacante(string nome, int idade, int habilidade, int gols, int camisa, int velocidade, int tecnica)
+: Jogador(nome, idade, habilidade, gols, camisa) {
     this->velocidade = velocidade;
     this->tecnica = tecnica;
 }
