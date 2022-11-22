@@ -8,6 +8,7 @@ class Jogador {
         int idade, habilidade, gols, camisa;
 
     public:
+        Jogador()= default;
         Jogador(std::string, int, int, int, int);
 
         std::string getNome();
