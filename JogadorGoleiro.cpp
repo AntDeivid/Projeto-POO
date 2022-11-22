@@ -11,7 +11,7 @@ float Goleiro::getAltura(){
     return altura;
 }
 
-void Goleiro::setAltura(int altura){
+void Goleiro::setAltura(float altura){
     this->altura = altura;
 }
 
@@ -24,6 +24,6 @@ void Goleiro::setReflexos(int reflexos){
 }
 
 int Goleiro::getHabilidade(){
-    return ((getHabilidade()*5)+ (((int)(getAltura()*100))*2) + (getReflexos*3))/10;
+    return ((Jogador::getHabilidade()*5)+ (((int)(this->altura*100))*2) + (this->reflexos*3))/10;
 }
 
