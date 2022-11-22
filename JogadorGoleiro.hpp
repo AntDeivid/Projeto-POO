@@ -18,4 +18,4 @@ class Goleiro: public Jogador{
         int getHabilidade();
 };
 
-#endif // JOGADOR_GOLEIRO_H
+#endif // JOGADOR_GOLEIRO_HPP
