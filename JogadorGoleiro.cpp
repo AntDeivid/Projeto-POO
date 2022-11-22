@@ -26,4 +26,3 @@ void Goleiro::setReflexos(int reflexos){
 int Goleiro::getHabilidade(){
     return ((getHabilidade()*5)+ (((int)(getAltura()*100))*2) + (getReflexos*3))/10;
 }
-
