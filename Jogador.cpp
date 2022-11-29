@@ -14,7 +14,6 @@ Jogador::Jogador(std::string nome, int idade, int habilidade, int gols, int cami
 
 string Jogador::getNome() { return this->nome; }
 void Jogador::setNome(string nome) { this->nome = nome; }
-//int Jogador::getHabilidade() {return this->habilidade; }
 int Jogador::getGols() { return this->gols; }
 void Jogador::somaGol() { this->gols++; }
 int Jogador::getCamisa(){

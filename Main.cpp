@@ -83,8 +83,11 @@ int main() {
 
                     for (int i = 0; i < times.size(); i++) {
                         if (times[i].getNome() == nome) {
+                            cout << "+=============================================+" << endl;
                             cout << times[i].getNome() << endl;
+                            cout << "+=============================================+" << endl;
                             times[i].printJogadores();
+                            cout << "+=============================================+" << endl;
                         }
                     }
 
@@ -98,7 +101,12 @@ int main() {
                 break;
             }
             case 5: {
- 
+                // editar time
+                cout << "Escolha qual time deseja editar (Flamengo, Palmeiras, São Paulo e Ceara): " << endl;
+                string nome;
+                cin >> nome;
+
+                
                 break;
             }
             case 6: {
