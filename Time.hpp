@@ -2,6 +2,7 @@
 #define TIME_HPP
 #include "Jogador.hpp"
 #include <iostream>
+#include <sstream>
 #include <vector>
 
 class Time : public Jogador{
