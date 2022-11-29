@@ -22,7 +22,7 @@ void Time::printJogadores(){
 }
 
 void Time::insJogadores(Jogador *jog){
-    jogador.push_back((Jogador) *jog);
+    jogador.push_back(*jog);
 }
 
 string Time::getResultados(){
