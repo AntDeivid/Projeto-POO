@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Partidas::Partidas(Date &data, Time &timeCasa, Time &timeVisitante) {
+Partidas::Partidas(Date *data, Time *timeCasa, Time *timeVisitante) {
     this->data = data;
     this->timeCasa = timeCasa;
     this->timeVisitante = timeVisitante;
