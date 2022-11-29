@@ -20,6 +20,8 @@ class Jogador {
         void somaGol();
         int getCamisa();
         void setCamisa(int camisa);
+        int getIdade();
+        void setIdade(int idade);
 
 };
 

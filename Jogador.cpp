@@ -21,3 +21,5 @@ int Jogador::getCamisa(){
     return this->camisa;
 }
 void Jogador::setCamisa(int camisa) { this->camisa = camisa; }
+int Jogador::getIdade(){ return this->idade; }
+void Jogador::setIdade(int idade) { this->idade = idade; }
