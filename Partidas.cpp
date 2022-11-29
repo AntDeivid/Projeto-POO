@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <sstring>
+#include <sstream>
 #include "Partidas.hpp"
 
 using namespace std;
