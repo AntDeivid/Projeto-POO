@@ -17,7 +17,11 @@ void Time::setNome(string nome){
 
 void Time::printJogadores(){
     for (int i = 0; i < jogador.size(); i++){
-        cout << jogador[i].getNome() << endl;
+        cout << "Nome: " << jogador[i].getNome() << endl;
+        cout << "Idade: " << jogador[i].getNome() << endl;
+        cout << "Habilidade: " << jogador[i].getHabilidade() << endl;
+        cout << "Gols: " << jogador[i].getGols() << endl;
+        cout << "Camisa: " << jogador[i].getCamisa() << endl;
     }
 }
 

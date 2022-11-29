@@ -18,6 +18,8 @@ class Jogador {
         virtual int getHabilidade(){};
         int getGols();
         void somaGol();
+        int getCamisa();
+        void setCamisa(int camisa);
 
 };
 

@@ -17,3 +17,7 @@ void Jogador::setNome(string nome) { this->nome = nome; }
 //int Jogador::getHabilidade() {return this->habilidade; }
 int Jogador::getGols() { return this->gols; }
 void Jogador::somaGol() { this->gols++; }
+int Jogador::getCamisa(){
+    return this->camisa;
+}
+void Jogador::setCamisa(int camisa) { this->camisa = camisa; }
