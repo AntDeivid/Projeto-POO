@@ -2,11 +2,13 @@
 #define TIME_HPP
 #include "Jogador.hpp"
 #include <iostream>
+#include <vector>
 
 class Time : public Jogador{
     private:
         std::string nome;
-        Jogador *jogadores;
+        vector<Jogador> jogador;
+        int numJog{0};
         int vitorias{0};
         int derrotas{0};
         int empates{0};
@@ -16,11 +18,11 @@ class Time : public Jogador{
         std::string getNome();
         void setNome(std::string nome);
         std::string getResultados();
-        void printJogadores(Jogador *jogador[]);
+        void printJogadores();
         int somaVitorias();
         int somaDerrotas();
         int somaEmpates();
-        void insJogadores(Jogador *jogador);
+        void insJogadores(Jogador *jog);
 };
 
 #endif // TIME_HPP

@@ -2,6 +2,7 @@
 #include "Time.hpp"
 using namespace std;
 #include <iostream>
+#include <vector>
 
 Time::Time(string nome){
     this->nome = nome;
@@ -14,12 +15,15 @@ void Time::setNome(string nome){
     this->nome = nome;
 }
 
-void Time::printJogadores(Jogador *jogador[]){
-    for(int i=0; i<11; i++){
-        cout << jogador[i]->getNome() << endl;
+void Time::printJogadores(){
+    for (int i = 0; i < jogador.size(); i++){
+        cout << jogador[i].getNome() << endl;
     }
 }
 
+void Time::insJogadores(Jogador *jog){
+    jogador.push_back(jog);
+}
 
 string Time::getResultados(){
     cout << "Vitorias: " << somaVitorias() << ", Empates: " << somaEmpates() << ", Derrotas: " << somaDerrotas() << endl;
