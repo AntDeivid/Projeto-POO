@@ -17,11 +17,11 @@ void Time::setNome(string nome){
 
 void Time::printJogadores(){
     for (int i = 0; i < jogador.size(); i++){
-        cout << "Nome: " << jogador[i].getNome() << " "
-             << "Idade: " << jogador[i].getIdade() << " "
-             << "Habilidade: " << jogador[i].getHabilidade() << " "
-             << "Gols: " << jogador[i].getGols() << " "
-             << "Camisa: " << jogador[i].getCamisa() << endl;
+        cout << "Nome: " << jogador[i].getNome()
+             << " | Idade: " << jogador[i].getIdade()
+             << " | Habilidade: " << jogador[i].getHabilidade()
+             << " | Gols: " << jogador[i].getGols()
+             << " | Camisa: " << jogador[i].getCamisa() << endl;
     }
 }
 
