@@ -1,8 +1,9 @@
 #include <iostream>
 #include "Time.hpp"
-using namespace std;
 #include <iostream>
 #include <vector>
+
+using namespace std;
 
 Time::Time(string nome){
     this->nome = nome;
@@ -32,10 +33,3 @@ void Time::insJogadores(Jogador *jog){
 string Time::getResultados(){
     cout << "Vitorias: " << somaVitorias() << ", Empates: " << somaEmpates() << ", Derrotas: " << somaDerrotas() << endl;
 }
-
-
-
-
-
-
-
