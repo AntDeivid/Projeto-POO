@@ -23,4 +23,4 @@ class Date {
         void print() { std::cout << this->getDia() << "/" << this->getMes() << "/" << this->getAno() << std::endl; }
 
 };
-#endif // DATE_H
+#endif // DATE_HPP
