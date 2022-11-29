@@ -12,7 +12,7 @@ class Partidas {
         int placarCasa, placarVisitante;
 
     public:
-        Partidas(Date &data, Time &timeCasa, Time &timeVisitante);
+        Partidas(Date *data, Time *timeCasa, Time *timeVisitante);
 
         std::string getCasa();
         std::string getVisitante();
