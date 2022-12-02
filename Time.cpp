@@ -18,6 +18,7 @@ void Time::setNome(string nome){
 }
 
 void Time::printJogadores(){
+    cout << "Goleiros: " << endl;
     for (int i = 0; i < jogador.size(); i++){
         cout << "Nome: " << jogador[i].getNome()
              << " | Idade: " << jogador[i].getIdade()
@@ -36,3 +37,5 @@ string Time::getResultados(){
     ss << "Vitorias: " << somaVitorias() << ", Empates: " << somaEmpates() << ", Derrotas: " << somaDerrotas() << endl;
     return ss.str();
 }
+
+vector<Jogador> Time::getJogadores() { return this->jogador;}
