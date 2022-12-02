@@ -15,7 +15,7 @@ class Jogador {
 
         std::string getNome();
         void setNome(std::string);
-        virtual int getHabilidade();
+        virtual int getHabilidade(){}
         int getGols();
         void somaGol();
         int getCamisa();
