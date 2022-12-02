@@ -8,7 +8,6 @@ class Time : public Jogador{
     private:
         std::string nome;
         vector<Jogador> jogador;
-        int numJog{0};
         int vitorias{0};
         int derrotas{0};
         int empates{0};
