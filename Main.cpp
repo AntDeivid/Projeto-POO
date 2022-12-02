@@ -9,6 +9,11 @@ using namespace std;
 
 // main interativa com do while
 
+int verifica_flamengo = 0;
+int verifica_palmeiras = 0;
+int verifica_saopaulo = 0;
+int verifica_ceara = 0;
+
 int main() {
     
     int opcao;
@@ -26,9 +31,38 @@ int main() {
                 string nome;
                 cin >> nome;
 
-                if (nome == "Flamengo" || nome == "Palmeiras" || nome == "São Paulo" || nome == "Ceara") {
-                    Time *time = new Time(nome);
-                    times.push_back(*time);
+                if (nome == "Flamengo") {
+                    if (verifica_flamengo == 0) {
+                        Time time(nome);
+                        times.push_back(time);
+                        verifica_flamengo = 1;
+                    } else {
+                        cout << "Time já existe" << endl;
+                    }
+                } else if (nome == "Palmeiras") {
+                    if (verifica_palmeiras == 0) {
+                        Time time(nome);
+                        times.push_back(time);
+                        verifica_palmeiras = 1;
+                    } else {
+                        cout << "Time já existe" << endl;
+                    }
+                } else if (nome == "São Paulo") {
+                    if (verifica_saopaulo == 0) {
+                        Time time(nome);
+                        times.push_back(time);
+                        verifica_saopaulo = 1;
+                    } else {
+                        cout << "Time já existe" << endl;
+                    }
+                } else if (nome == "Ceara") {
+                    if (verifica_ceara == 0) {
+                        Time time(nome);
+                        times.push_back(time);
+                        verifica_ceara = 1;
+                    } else {
+                        cout << "Time já existe" << endl;
+                    }
                 } else {
                     try {
                         throw "Nao e possivel criar esse time, pois nao existe!";
@@ -45,18 +79,57 @@ int main() {
                 string nome;
                 cin >> nome;
 
-                if (nome == "Flamengo" || nome == "Palmeiras" || nome == "São Paulo" || nome == "Ceara") {
-                    Time *time = new Time(nome);
+                if (nome == "Flamengo"){
+                    if (verifica_flamengo == 1) {
 
-                    for (int i = 0; i < times.size(); i++) {
-                        if (times[i].getNome() == nome) {
-                            times.erase(times.begin() + i);
+                        for (int i = 0; i < times.size(); i++) {
+                            if (times[i].getNome() == nome) {
+                                times.erase(times.begin() + i);
+                            }
                         }
+                        verifica_flamengo = 0;
+                    } else {
+                        cout << "Time nao existe" << endl;
                     }
+                } else if (nome == "Palmeiras") {
+                    if (verifica_palmeiras == 1) {
 
+                        for (int i = 0; i < times.size(); i++) {
+                            if (times[i].getNome() == nome) {
+                                times.erase(times.begin() + i);
+                            }
+                        }
+                        verifica_palmeiras = 0;
+                    } else {
+                        cout << "Time nao existe" << endl;
+                    }
+                } else if (nome == "São Paulo") {
+                    if (verifica_saopaulo == 1) {
+
+                        for (int i = 0; i < times.size(); i++) {
+                            if (times[i].getNome() == nome) {
+                                times.erase(times.begin() + i);
+                            }
+                        }
+                        verifica_saopaulo = 0;
+                    } else {
+                        cout << "Time nao existe" << endl;
+                    }
+                } else if (nome == "Ceara") {
+                    if (verifica_ceara == 1) {
+
+                        for (int i = 0; i < times.size(); i++) {
+                            if (times[i].getNome() == nome) {
+                                times.erase(times.begin() + i);
+                            }
+                        }
+                        verifica_ceara = 0;
+                    } else {
+                        cout << "Time nao existe" << endl;
+                    }
                 } else {
                     try {
-                        throw "Nao e possivel deletar esse time, pois ele nao existe";
+                        throw "Nao e possivel remover esse time, pois nao existe!";
                     } catch (const char* msg) {
                         cerr << msg << endl;
                     }
@@ -113,7 +186,6 @@ int main() {
 
                 switch(editar) {
                     case 1: {
-
                         vector<Jogador> jogadores = times[escolha].getJogadores();
                         for (int i = 0; i < jogadores.size(); i++) {
                             cout << i << " - " << jogadores[i].getNome() << endl;
@@ -149,10 +221,15 @@ int main() {
             case 6: {
                 
             }
+            case 7: {
+                // sair
+                menu_saida();
+                break;
+            }
             default:
                 cout << "Opcao invalida" << endl;
                 break;
         }
-    } while (opcao != 0);
+    } while (opcao != 7);
     return 0;
 }

@@ -32,3 +32,31 @@ void menu_jogador() {
     cout << "+=============================================+" << endl;
     cout << "Opcao: ";
 }
+
+void menu_saida() {
+    system("clear || cls");
+    cout << endl;
+    cout << "+==================================+\n";
+    cout << "|           DESENVOLVIDO           |\n";
+    cout << "|               POR:               |\n";
+    cout << "|==================================|\n";
+    cout << "|         - ANTONIO DEIVID         |\n";
+    cout << "|         - VICTOR EMANUEL         |\n";
+    cout << "|         - JOAO PEDRO             |\n";
+    cout << "|==================================|\n";
+    cout << "|   CIENCIA DA COMPUTACAO 2022.2   |\n";
+    cout << "|==================================|\n";
+    cout << "|      UFC - CAMPUS DE QUIXADA     |\n";
+    cout << "|==================================|\n";
+    cout << "|             DISCIPLINA:          |\n";
+    cout << "|  PROGAMACAO ORIENTADA A OBJETOS  |\n";
+    cout << "|==================================|\n";
+    cout << "|              PROJETO:            |\n";  
+    cout << "|           FOOTBALL MANAGER       |\n";
+    cout << "|==================================|\n";
+    cout << "|             PROFESSOR:           |\n";
+    cout << "|            THIAGO WERLLEY        |\n";
+    cout << "+==================================+\n";
+
+    cout << endl;
+}
