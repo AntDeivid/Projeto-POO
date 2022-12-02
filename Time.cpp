@@ -49,15 +49,21 @@ void Time::insJogadores(Jogador *jog){
 }
 
 int Time::somaVitorias(){
-
+    int vit = getVitorias();
+    setVitorias(vit+1);
+    return getVitorias();   
 }
 
 int Time::somaDerrotas(){
-
+    int der = getDerrotas();
+    setDerrotas(der+1);
+    return getDerrotas();
 }
 
 int Time::somaEmpates(){
-
+    int emp = getEmpates();
+    setEmpates(emp+1);
+    return getEmpates();
 }
 
 string Time::getResultados(){
