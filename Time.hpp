@@ -25,6 +25,13 @@ class Time : public Jogador{
         int somaEmpates();
         void insJogadores(Jogador *jog);
         std::vector<Jogador> getJogadores();
+        void setVitorias(int vitorias);
+        void setEmpates(int empates);
+        void setDerrotas(int derrotas);
+        int getVitorias();
+        int getEmpates();
+        int getDerrotas();
+
 };
 
 #endif // TIME_HPP

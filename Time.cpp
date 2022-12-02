@@ -17,6 +17,22 @@ void Time::setNome(string nome){
     this->nome = nome;
 }
 
+int Time:: getVitorias(){
+    return this->vitorias;
+}
+
+int Time::getEmpates(){
+    return this->empates;
+}
+
+int Time::getDerrotas(){
+    return this->derrotas;
+}
+
+void Time::setDerrotas(int derrotas){ this-> derrotas = derrotas; }
+void Time::setVitorias(int vitorias){ this-> vitorias = vitorias; }
+void Time::setEmpates(int empates){ this-> empates = empates; }
+
 void Time::printJogadores(){
     cout << "Goleiros: " << endl;
     for (int i = 0; i < jogador.size(); i++){
