@@ -73,20 +73,22 @@ int main() {
                 break;
             }
             case 4: {
+                // terminar (perguntar pro pernambucano)
                 // visualizar time com seus jogadores
-                cout << "Escolha qual time deseja visualizar (Flamengo, Palmeiras, São Paulo e Ceara): " << endl;
-                string nome;
-                cin >> nome;
+                for (int i = 0; i < times.size(); i++) {
+                    cout << i << " - " << times[i].getNome() << endl;
+                }
+                cout << "Escolha qual time deseja visualizar: " << endl;
+                int escolha;
+                cin >> escolha;
 
-                if (nome == "Flamengo" || nome == "Palmeiras" || nome == "São Paulo" || nome == "Ceara") {
-                    Time *time = new Time(nome);
+                if (escolha >= 0 && escolha < times.size()) {
 
-                    for (int i = 0; i < times.size(); i++) {
-                        if (times[i].getNome() == nome) {
-                            cout << times[i].getNome() << endl;
-                            times[i].printJogadores();
-                        }
-                    }
+                    cout << "+=============================================+" << endl;
+                    cout << times[escolha].getNome() << endl;
+                    cout << "+=============================================+" << endl;
+                    times[escolha].printJogadores();
+                    cout << "+=============================================+" << endl;
 
                 } else {
                     try {
@@ -98,7 +100,50 @@ int main() {
                 break;
             }
             case 5: {
- 
+                // editar time
+                for (int i = 0; i < times.size(); i++) {
+                    cout << i << " - " << times[i].getNome() << endl;
+                }
+                cout << "Escolha qual time deseja editar: " << endl;
+                int escolha;
+                cin >> escolha;
+                menu_editar();
+                int editar;
+                cin >> editar;
+
+                switch(editar) {
+                    case 1: {
+
+                        vector<Jogador> jogadores = times[escolha].getJogadores();
+                        for (int i = 0; i < jogadores.size(); i++) {
+                            cout << i << " - " << jogadores[i].getNome() << endl;
+                        }
+                        cout << "Escolha qual jogador deseja editar: " << endl;
+                        menu_jogador();
+
+                        int opcaoJogador;
+                        cin >> opcaoJogador;
+                        
+                        switch(opcaoJogador) {
+                            case 1: {
+                                string novoNome;
+                                getline(cin, novoNome);
+                                jogadores[opcaoJogador].setNome(novoNome);
+                                cout << "Nome alterado para: " << times[escolha].getNome() << endl;
+                            }
+                        }
+                        break;
+                    }
+
+                    case 2: {
+                        string novoNome;
+                        getline(cin, novoNome);
+                        times[escolha].setNome(novoNome);
+                        cout << "Nome alterado para: " << times[escolha].getNome() << endl;
+                        break;
+                    }
+                }
+                
                 break;
             }
             case 6: {

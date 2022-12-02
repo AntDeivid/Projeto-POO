@@ -1,8 +1,10 @@
 #include <iostream>
 #include "Time.hpp"
-using namespace std;
 #include <iostream>
+#include <sstream>
 #include <vector>
+
+using namespace std;
 
 Time::Time(string nome){
     this->nome = nome;
@@ -16,12 +18,13 @@ void Time::setNome(string nome){
 }
 
 void Time::printJogadores(){
+    cout << "Goleiros: " << endl;
     for (int i = 0; i < jogador.size(); i++){
-        cout << "Nome: " << jogador[i].getNome() << " "
-             << "Idade: " << jogador[i].getIdade() << " "
-             << "Habilidade: " << jogador[i].getHabilidade() << " "
-             << "Gols: " << jogador[i].getGols() << " "
-             << "Camisa: " << jogador[i].getCamisa() << endl;
+        cout << "Nome: " << jogador[i].getNome()
+             << " | Idade: " << jogador[i].getIdade()
+             << " | Habilidade: " << jogador[i].getHabilidade()
+             << " | Gols: " << jogador[i].getGols()
+             << " | Camisa: " << jogador[i].getCamisa() << endl;
     }
 }
 
@@ -30,12 +33,9 @@ void Time::insJogadores(Jogador *jog){
 }
 
 string Time::getResultados(){
-    cout << "Vitorias: " << somaVitorias() << ", Empates: " << somaEmpates() << ", Derrotas: " << somaDerrotas() << endl;
+    stringstream ss;
+    ss << "Vitorias: " << somaVitorias() << ", Empates: " << somaEmpates() << ", Derrotas: " << somaDerrotas() << endl;
+    return ss.str();
 }
 
-
-
-
-
-
-
+vector<Jogador> Time::getJogadores() { return this->jogador;}

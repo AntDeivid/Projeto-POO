@@ -15,3 +15,20 @@ void primeiro_menu() {
     cout << "+=============================================+" << endl;
     cout << "Opcao: ";
 }
+
+void menu_editar() {
+    cout << "+=============================================+" << endl;
+    cout << "|(1) - Editar jogador                         |" << endl;
+    cout << "|(2) - Editar nome do time                    |" << endl;
+    cout << "+=============================================+" << endl;
+    cout << "Opcao: ";
+}
+
+void menu_jogador() {
+    cout << "+=============================================+" << endl;
+    cout << "|(1) - Editar nome                            |" << endl;
+    cout << "|(2) - Editar idade                           |" << endl;
+    cout << "|(3) - Editar camisa                          |" << endl;
+    cout << "+=============================================+" << endl;
+    cout << "Opcao: ";
+}
