@@ -32,6 +32,18 @@ void Time::insJogadores(Jogador *jog){
     jogador.push_back(*jog);
 }
 
+int Time::somaVitorias(){
+
+}
+
+int Time::somaDerrotas(){
+
+}
+
+int Time::somaEmpates(){
+
+}
+
 string Time::getResultados(){
     stringstream ss;
     ss << "Vitorias: " << somaVitorias() << ", Empates: " << somaEmpates() << ", Derrotas: " << somaDerrotas() << endl;
