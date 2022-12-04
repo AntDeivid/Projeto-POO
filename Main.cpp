@@ -180,7 +180,9 @@ int main() {
                 cout << "Escolha qual time deseja editar: " << endl;
                 int escolha;
                 cin >> escolha;
+
                 menu_editar();
+
                 int editar;
                 cin >> editar;
 
@@ -191,6 +193,9 @@ int main() {
                             cout << i << " - " << jogadores[i].getNome() << endl;
                         }
                         cout << "Escolha qual jogador deseja editar: " << endl;
+                        int jogadorEscolhido;
+                        cin >> jogadorEscolhido;
+
                         menu_jogador();
 
                         int opcaoJogador;
@@ -200,8 +205,25 @@ int main() {
                             case 1: {
                                 string novoNome;
                                 getline(cin, novoNome);
-                                jogadores[opcaoJogador].setNome(novoNome);
-                                cout << "Nome alterado para: " << times[escolha].getNome() << endl;
+                                jogadores[jogadorEscolhido].setNome(novoNome);
+                                cout << "Nome do jogador alterado para: " << jogadores[jogadorEscolhido].getNome() << endl;
+                                break;
+                            }
+
+                            case 2: {
+                                int novaIdade;
+                                cin >> novaIdade;
+                                jogadores[jogadorEscolhido].setIdade(novaIdade);
+                                cout << "Idade alterada para: " << jogadores[jogadorEscolhido].getIdade() << endl;
+                                break;
+                            }
+
+                            case 3: {
+                                int novaCamisa;
+                                cin >> novaCamisa;
+                                jogadores[jogadorEscolhido].setCamisa(novaCamisa);
+                                cout << "Camisa alterada para: " << jogadores[jogadorEscolhido].getCamisa() << endl;
+                                break;
                             }
                         }
                         break;
@@ -211,7 +233,7 @@ int main() {
                         string novoNome;
                         getline(cin, novoNome);
                         times[escolha].setNome(novoNome);
-                        cout << "Nome alterado para: " << times[escolha].getNome() << endl;
+                        cout << "Nome do time alterado para: " << times[escolha].getNome() << endl;
                         break;
                     }
                 }
