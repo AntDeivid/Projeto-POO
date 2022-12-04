@@ -13,3 +13,8 @@ int JogadorDefesa::getHabilidade()
 {
     return ((Jogador::getHabilidade()*5) + (cobertura*3) + (desarme*2) )/10;
 }
+
+const type_info& JogadorDefesa::getID() {
+    std::type_info& defesaID = typeid(JogadorDefesa());
+    return defesaID.name();
+}

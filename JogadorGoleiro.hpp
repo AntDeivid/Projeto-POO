@@ -16,6 +16,7 @@ class Goleiro: public Jogador{
         float getAltura();
         void setAltura(float altura);
         int getHabilidade();
+        const std::type_info& getID();
 };
 
 #endif // JOGADOR_GOLEIRO_HPP

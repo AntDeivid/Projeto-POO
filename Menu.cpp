@@ -34,6 +34,10 @@ void menu_jogador() {
     cout << "Opcao: ";
 }
 
+void menu_partida() {
+    //fazer
+}
+
 void menu_saida() {
     system("clear || cls");
     cout << endl;

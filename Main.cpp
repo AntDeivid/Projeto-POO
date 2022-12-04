@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <typeinfo>
 #include "Partidas.hpp"
 #include "Menu.hpp"
 
@@ -146,8 +147,8 @@ int main() {
                 break;
             }
             case 4: {
-                // terminar (perguntar pro pernambucano)
                 // visualizar time com seus jogadores
+
                 for (int i = 0; i < times.size(); i++) {
                     cout << i << " - " << times[i].getNome() << endl;
                 }
@@ -162,6 +163,11 @@ int main() {
                     cout << "+=============================================+" << endl;
                     times[escolha].printJogadores();
                     cout << "+=============================================+" << endl;
+                    cout << "Vitorias: " << times[escolha].getVitorias() << endl
+                    cout << "+=============================================+" << endl;
+                    cout << "Empates: " << times[escolha].getEmpates() << endl
+                    cout << "+=============================================+" << endl;
+                    cout << "Derrotas: " << times[escolha].getDerrotas() << endl
 
                 } else {
                     try {
@@ -241,7 +247,8 @@ int main() {
                 break;
             }
             case 6: {
-                
+                // iniciar partida
+                menu_partida();
             }
             case 7: {
                 // sair

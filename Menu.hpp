@@ -4,6 +4,7 @@
 void primeiro_menu();
 void menu_editar();
 void menu_jogador();
+void menu_partida();
 void menu_saida();
 
 
