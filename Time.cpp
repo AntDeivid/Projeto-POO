@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <typeinfo>
 
 using namespace std;
 
@@ -34,15 +35,11 @@ void Time::setVitorias(int vitorias){ this-> vitorias = vitorias; }
 void Time::setEmpates(int empates){ this-> empates = empates; }
 
 void Time::printJogadores(){
-    // criando um id para cada tipo de jogador
-    const type_info& goleiroID = typeid(JogadorGoleiro()).name();
-    const type_info& defesaID = typeid(JogadorDefesa()).name();
-    const type_info& atacanteID = typeid(JogadorAtacante()).name();
 
     cout << "Goleiros: " << endl;
     cout << "------------------------------------------------------------" << endl;
     for (int i = 0; i < jogador.size(); i++){
-        if (jogador[i].getID() == goleiroID) {
+        if (jogador[i].getId() == "goleiro") {
             cout << "Nome: " << jogador[i].getNome()
                 << " | Idade: " << jogador[i].getIdade()
                 << " | Habilidade: " << jogador[i].getHabilidade()
@@ -54,7 +51,7 @@ void Time::printJogadores(){
     cout << "Defensores: " << endl;
     cout << "------------------------------------------------------------" << endl;
     for (int i = 0; i < times.size(); i++) {
-    if (jogador[i].getID() == defesaID) {
+    if (jogador[i].getId() == "defesa") {
             cout << "Nome: " << jogador[i].getNome()
                 << " | Idade: " << jogador[i].getIdade()
                 << " | Habilidade: " << jogador[i].getHabilidade()
@@ -66,7 +63,7 @@ void Time::printJogadores(){
     cout << "Atacantes: " << endl;
     cout << "------------------------------------------------------------" << endl;
     for (int i = 0; i < times.size(); i++) {
-    if (jogador[i].getID() == atacanteID) {
+    if (jogador[i].getId() == "atacante") {
             cout << "Nome: " << jogador[i].getNome()
                 << " | Idade: " << jogador[i].getIdade()
                 << " | Habilidade: " << jogador[i].getHabilidade()

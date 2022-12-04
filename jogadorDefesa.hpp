@@ -10,11 +10,12 @@ class JogadorDefesa : public Jogador
     private:
         int cobertura;
         int desarme;
+        std::string id = "defesa";
     public:
         JogadorDefesa() = default;
         JogadorDefesa(std::string, int, int, int, int, int, int);
         int getHabilidade();
-        const std::type_info& getID();
+        std::string getId() { return this->id; }
 };
 
 

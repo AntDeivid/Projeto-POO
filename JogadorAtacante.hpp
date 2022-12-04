@@ -10,13 +10,13 @@ class JogadorAtacante : public Jogador {
 
     private:
         int velocidade, tecnica;
+        std::string id = "atacante";
 
     public:
         JogadorAtacante() = default;
         JogadorAtacante(std::string, int, int, int, int, int, int);
-
         int getHabilidade();
-        const std::type_info& getID();
+        std::string getId() { return this->id; }
 
 };
 

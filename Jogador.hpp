@@ -22,6 +22,7 @@ class Jogador {
         void setCamisa(int camisa);
         int getIdade();
         void setIdade(int idade);
+        virtual std::string getId();
 
 };
 

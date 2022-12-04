@@ -26,8 +26,3 @@ void Goleiro::setReflexos(int reflexos){
 int Goleiro::getHabilidade(){
     return ((Jogador::getHabilidade()*5)+ (((int)(this->altura*100))*2) + (this->reflexos*3))/10;
 }
-
-const type_info& JogadorGoleiro::getID() {
-    std::type_info& goleiroID = typeid(JogadorGoleiro());
-    return goleiroID.name();
-}

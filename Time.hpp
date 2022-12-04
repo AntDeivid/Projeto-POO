@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <typeinfo>
 
 class Time : public Jogador{
     private:

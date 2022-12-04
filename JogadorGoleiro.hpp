@@ -8,6 +8,7 @@ class Goleiro: public Jogador{
     private:
         int reflexos;
         float altura;
+        std::string id = "goleiro";
     
     public:
         Goleiro(std::string nome, int idade, int habilidade, int gols, int camisa, int reflexos, float altura);
@@ -16,7 +17,7 @@ class Goleiro: public Jogador{
         float getAltura();
         void setAltura(float altura);
         int getHabilidade();
-        const std::type_info& getID();
+        std::string getId() { return this->id; }
 };
 
 #endif // JOGADOR_GOLEIRO_HPP
