@@ -50,7 +50,7 @@ void Time::printJogadores(){
 
     cout << "Defensores: " << endl;
     cout << "------------------------------------------------------------" << endl;
-    for (int i = 0; i < times.size(); i++) {
+    for (int i = 0; i < jogador.size(); i++) {
     if (jogador[i].getId() == "defesa") {
             cout << "Nome: " << jogador[i].getNome()
                 << " | Idade: " << jogador[i].getIdade()
@@ -62,7 +62,7 @@ void Time::printJogadores(){
 
     cout << "Atacantes: " << endl;
     cout << "------------------------------------------------------------" << endl;
-    for (int i = 0; i < times.size(); i++) {
+    for (int i = 0; i < jogador.size(); i++) {
     if (jogador[i].getId() == "atacante") {
             cout << "Nome: " << jogador[i].getNome()
                 << " | Idade: " << jogador[i].getIdade()
