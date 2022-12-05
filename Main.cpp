@@ -10,7 +10,7 @@
 using namespace std;
 
 // função para escrever os resultados das partidas no arquivo
-void escreveArquivo(Partidas partida) {
+/*void escreveArquivo(Partidas partida) {
     ofstream arquivo;
     arquivo.open("partidas.txt", ios::app);
     arquivo << partida.getPlacar() << endl;
@@ -26,7 +26,7 @@ void leArquivo() {
         cout << linha << endl;
     }
     arquivo.close();
-}
+} */
 
 int verifica_flamengo = 0;
 int verifica_palmeiras = 0;
