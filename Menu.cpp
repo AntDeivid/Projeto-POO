@@ -49,7 +49,7 @@ void menu_saida() {
     system("clear || cls");
     cout << endl;
     cout << "+==================================+\n";
-    cout << "|           DESENVOLVIDO           |\n";
+    cout << "|            DESENVOLVIDO          |\n";
     cout << "|               POR:               |\n";
     cout << "|==================================|\n";
     cout << "|         - ANTONIO DEIVID         |\n";
@@ -60,14 +60,14 @@ void menu_saida() {
     cout << "|==================================|\n";
     cout << "|      UFC - CAMPUS DE QUIXADA     |\n";
     cout << "|==================================|\n";
-    cout << "|             DISCIPLINA:          |\n";
+    cout << "|            DISCIPLINA:           |\n";
     cout << "|  PROGAMACAO ORIENTADA A OBJETOS  |\n";
     cout << "|==================================|\n";
-    cout << "|              PROJETO:            |\n";  
-    cout << "|           FOOTBALL MANAGER       |\n";
+    cout << "|            PROJETO:              |\n";  
+    cout << "|         FOOTBALL MANAGER         |\n";
     cout << "|==================================|\n";
-    cout << "|             PROFESSOR:           |\n";
-    cout << "|            THIAGO WERLLEY        |\n";
+    cout << "|            PROFESSOR:            |\n";
+    cout << "|         THIAGO WERLLEY           |\n";
     cout << "+==================================+\n";
 
     cout << endl;

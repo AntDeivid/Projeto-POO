@@ -6,16 +6,17 @@
 class Jogador {
 
     private:
-        std::string nome;
+        std::string nome, id = " ";
         int idade, habilidade, gols, camisa;
 
     public:
         Jogador()= default;
         Jogador(std::string, int, int, int, int);
+        //virtual ~Jogador();
 
         std::string getNome();
         void setNome(std::string);
-        virtual int getHabilidade(){}
+        virtual int getHabilidade();
         int getGols();
         void somaGol();
         int getCamisa();
