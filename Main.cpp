@@ -3,12 +3,30 @@
 #include <sstream>
 #include <vector>
 #include <typeinfo>
+#include <fstream>
 #include "Partidas.hpp"
 #include "Menu.hpp"
 
 using namespace std;
 
-// main interativa com do while
+// função para escrever os resultados das partidas no arquivo
+void escreveArquivo(Partidas partida) {
+    ofstream arquivo;
+    arquivo.open("partidas.txt", ios::app);
+    arquivo << partida.getPlacar() << endl;
+    arquivo.close();
+}
+
+// função para ler os resultados das partidas do arquivo
+void leArquivo() {
+    ifstream arquivo;
+    arquivo.open("partidas.txt");
+    string linha;
+    while (getline(arquivo, linha)) {
+        cout << linha << endl;
+    }
+    arquivo.close();
+}
 
 int verifica_flamengo = 0;
 int verifica_palmeiras = 0;
@@ -184,7 +202,7 @@ int main() {
                 cout << "Escolha qual time deseja editar: " << endl;
                 int escolha;
                 cin >> escolha;
-
+                
                 menu_editar();
 
                 int editar;
@@ -234,8 +252,9 @@ int main() {
                     }
 
                     case 2: {
+                        cout << "Digite o novo nome do time: ";
                         string novoNome;
-                        getline(cin, novoNome);
+                        cin >> novoNome;
                         times[escolha].setNome(novoNome);
                         cout << "Nome do time alterado para: " << times[escolha].getNome() << endl;
                         break;
@@ -259,6 +278,9 @@ int main() {
                 }
             }
             case 7: {
+                
+            }
+            case 8: {
                 // sair
                 menu_saida();
                 break;
@@ -267,6 +289,6 @@ int main() {
                 cout << "Opcao invalida" << endl;
                 break;
         }
-    } while (opcao != 7);
+    } while (opcao != 8);
     return 0;
 }
