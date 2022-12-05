@@ -246,7 +246,17 @@ int main() {
             }
             case 6: {
                 // iniciar partida
-                menu_partida();
+                while (true) {
+                    menu_partida();
+                    int escolha;
+                    cin >> escolha;
+                    switch(escolha) {
+                        case 1: {
+                            
+                        }
+                    }
+
+                }
             }
             case 7: {
                 // sair
