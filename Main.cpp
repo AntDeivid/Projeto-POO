@@ -265,7 +265,79 @@ int main() {
             }
             case 6: {
                 // iniciar partida
-                menu_partida();
+                    int timeCasa, timeVisitante, dia, mes, ano;
+
+                    cout << "Selecione os times para a partida (a primeira escolha é o time da casa): " << endl;
+                    for (int i = 0; i < times.size(); i++) {
+                        cout << i << " - " << times[i].getNome() << endl;
+                    }
+                    cin >> timeCasa >> timeVisitante;
+
+                    cout << "Informe a data da partida (dd mm aa): " << endl;
+                    cin >> dia >> mes >> ano;
+                    Data *dataDaPartida = new Data(dia, mes, ano);
+
+                    Partidas *partida = new Partidas(dataDaPartida, timeCasa, timeVisitante);
+
+                do {
+                    menu_partida();
+                    int opcaoPartida;
+                    cin >> opcaoPartida;
+
+                    switch (opcaoPartida) {
+                        case 1: {
+                            partida->getPlacar();
+                            break;
+                        }
+
+                        case 2: {
+                            cout << "Casa: " << partida->getCasa() << " Visitante: " << partida->getVisitante() << endl
+                            break;
+                        }
+
+                        case 3: {
+                            vector<Jogador> jogadores = times[timeCasa].getJogadores();
+
+                            cout << "Selecione o jogador que ira marcar o gol: " << endl;
+                            for (int i = 0; i < jogadores.size(); i++) {
+                                cout << i << " - " << jogadores[i].getNome() << endl;
+                            }
+
+                            int goleador;
+                            cin >> goleador;
+
+                            jogadores[goleador].somaGol();
+                            partida->golCasa();
+
+                            break;
+                        }
+
+                        case 4: {
+                            vector<Jogador> jogadores = times[timeCasa].getJogadores();
+
+                            cout << "Selecione o jogador que ira marcar o gol: " << endl;
+                            for (int i = 0; i < jogadores.size(); i++) {
+                                cout << i << " - " << jogadores[i].getNome() << endl;
+                            }
+
+                            int goleador;
+                            cin >> goleador;
+
+                            jogadores[goleador].somaGol();
+                            partida->golVisitante();
+
+                            break;
+
+                        }
+
+                        case 5: {
+                            cout << "Apita o arbitro, finaaaaaal de jogo!!!!!!!!!" << endl;
+                        }
+
+                    }
+
+
+                } while (opcaoPartida != 5)
                 
             }
             case 7: {

@@ -18,7 +18,7 @@ std::string Partidas::getVisitante() { return timeVisitante->getNome(); }
 
 std::string Partidas::getPlacar() {
     stringstream ss;
-    ss << "O placar esta" << this->placarCasa << " para o" << this->getCasa() <<" e " << this->placarVisitante << " para o " << this->getVisitante();
+    ss << this->getCasa() << " " << this->placarCasa << " X " << this->placarVisitante << " " << this->getVisitante();
     
     return ss.str();
 }
