@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Partidas::Partidas(Date *data, Time *timeCasa, Time *timeVisitante) {
+Partidas::Partidas(Date *data, Time timeCasa, Time timeVisitante) {
     this->data = data;
     this->timeCasa = timeCasa;
     this->timeVisitante = timeVisitante;
@@ -13,8 +13,8 @@ Partidas::Partidas(Date *data, Time *timeCasa, Time *timeVisitante) {
     this->placarVisitante = 0;
 }
 
-std::string Partidas::getCasa() { return timeCasa->getNome(); }
-std::string Partidas::getVisitante() { return timeVisitante->getNome(); }
+std::string Partidas::getCasa() { return timeCasa.getNome(); }
+std::string Partidas::getVisitante() { return timeVisitante.getNome(); }
 
 std::string Partidas::getPlacar() {
     stringstream ss;

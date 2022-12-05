@@ -10,6 +10,11 @@ class Date {
         int dia, mes, ano;
     public:
         Date();
+        Date(int dia, int mes, int ano) {
+            setDia(dia);
+            setAno(ano);
+            setMes(mes);
+        }
 
         int getDia() { return this->dia; }
         void setDia(int dia) { this->dia = dia; }

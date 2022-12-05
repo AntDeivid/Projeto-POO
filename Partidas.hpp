@@ -8,11 +8,11 @@ class Partidas {
 
     private:
         Date *data;
-        Time *timeCasa, *timeVisitante;
+        Time timeCasa, timeVisitante;
         int placarCasa, placarVisitante;
 
     public:
-        Partidas(Date *data, Time *timeCasa, Time *timeVisitante);
+        Partidas(Date *data, Time, Time);
 
         std::string getCasa();
         std::string getVisitante();

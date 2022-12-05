@@ -6,6 +6,7 @@
 #include <fstream>
 #include "Partidas.hpp"
 #include "Menu.hpp"
+#include "Date.hpp"
 
 using namespace std;
 
@@ -36,7 +37,7 @@ int verifica_ceara = 0;
 int main() {
     
     int opcao;
-    vector <Time> times;
+    vector < Time > times;
 
     do {
         primeiro_menu();
@@ -275,23 +276,23 @@ int main() {
 
                     cout << "Informe a data da partida (dd mm aa): " << endl;
                     cin >> dia >> mes >> ano;
-                    Data *dataDaPartida = new Data(dia, mes, ano);
+                    Date *dataDaPartida = new Date(dia, mes, ano);
 
-                    Partidas *partida = new Partidas(dataDaPartida, timeCasa, timeVisitante);
+                    Partidas partida(dataDaPartida, times[timeCasa], times[timeVisitante]);
 
+                    int opcaoPartida;
                 do {
                     menu_partida();
-                    int opcaoPartida;
                     cin >> opcaoPartida;
 
                     switch (opcaoPartida) {
                         case 1: {
-                            partida->getPlacar();
+                            partida.getPlacar();
                             break;
                         }
 
                         case 2: {
-                            cout << "Casa: " << partida->getCasa() << " Visitante: " << partida->getVisitante() << endl
+                            cout << "Casa: " << partida.getCasa() << " Visitante: " << partida.getVisitante() << endl;
                             break;
                         }
 
@@ -307,7 +308,7 @@ int main() {
                             cin >> goleador;
 
                             jogadores[goleador].somaGol();
-                            partida->golCasa();
+                            partida.golCasa();
 
                             break;
                         }
@@ -324,7 +325,7 @@ int main() {
                             cin >> goleador;
 
                             jogadores[goleador].somaGol();
-                            partida->golVisitante();
+                            partida.golVisitante();
 
                             break;
 
@@ -332,12 +333,13 @@ int main() {
 
                         case 5: {
                             cout << "Apita o arbitro, finaaaaaal de jogo!!!!!!!!!" << endl;
+                            break;
                         }
 
                     }
 
 
-                } while (opcaoPartida != 5)
+                } while (opcaoPartida != 5);
                 
             }
             case 7: {
