@@ -18,8 +18,8 @@ class Partidas {
         std::string getVisitante();
         std::string getPlacar();
 
-        void golCasa();
-        void golVisitante();
+        int golCasa();
+        int golVisitante();
 };
 
 
