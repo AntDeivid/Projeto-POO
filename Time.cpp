@@ -18,7 +18,7 @@ void Time::setNome(string nome){
     this->nome = nome;
 }
 
-int Time:: getVitorias(){
+int Time::getVitorias(){
     return this->vitorias;
 }
 

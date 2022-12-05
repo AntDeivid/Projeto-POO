@@ -13,12 +13,12 @@ using namespace std;
 // função para escrever os resultados das partidas no arquivo
 void escreveArquivo(Partidas partida) {
     // salva a quantidade de vitorias, empates e derrotas de cada time
-    int vitoriasCasa = partida.timeCasa.getVitorias();
-    int vitoriasVisitante = partida.timeVisitante.getVitorias();
-    int empatesCasa = partida.timeCasa.getEmpates();
-    int empatesVisitante = partida.timeVisitante.getEmpates();
-    int derrotasCasa = partida.timeCasa.getDerrotas();
-    int derrotasVisitante = partida.timeVisitante.getDerrotas();
+    int vitoriasCasa = partida.gettimeCasa().getVitorias();
+    int vitoriasVisitante = partida.gettimeVisitante().getVitorias();
+    int empatesCasa = partida.gettimeCasa().getEmpates();
+    int empatesVisitante = partida.gettimeVisitante().getEmpates();
+    int derrotasCasa = partida.gettimeCasa().getDerrotas();
+    int derrotasVisitante = partida.gettimeVisitante().getDerrotas();
 
     // abre o arquivo para escrita
     ofstream arquivo;
@@ -26,11 +26,11 @@ void escreveArquivo(Partidas partida) {
     
     // escreve no arquivo
     // salva a data da partida
-    arquivo << partida.data->getDia() << "/" << partida.data->getMes() << "/" << partida.data->getAno() << endl;
+    arquivo << partida.getData().print() << endl;
     arquivo << partida.getPlacar() << endl;
 
     // verifica se o time da casa ganhou
-    if (partida.placarCasa > partida.placarVisitante) {
+    if (partida.golCasa() > partida.golVisitante()) {
         // incrementa a quantidade de vitorias do time da casa
         vitoriasCasa++;
         // incrementa a quantidade de derrotas do time visitante

@@ -15,10 +15,14 @@ class Partidas {
         Partidas(Date *data, Time, Time);
 
         std::string getCasa();
+        Time gettimeCasa() { return this->timeCasa; }
         std::string getVisitante();
+        Time gettimeVisitante() { return this->timeVisitante; }
         std::string getPlacar();
+        Date getData() { return *data; }
 
         int golCasa();
+
         int golVisitante();
 };
 
