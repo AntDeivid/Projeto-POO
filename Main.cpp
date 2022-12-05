@@ -163,11 +163,9 @@ int main() {
                     cout << "+=============================================+" << endl;
                     times[escolha].printJogadores();
                     cout << "+=============================================+" << endl;
-                    cout << "Vitorias: " << times[escolha].getVitorias() << endl;
+                    times[escolha].getResultados();
                     cout << "+=============================================+" << endl;
-                    cout << "Empates: " << times[escolha].getEmpates() << endl;
-                    cout << "+=============================================+" << endl;
-                    cout << "Derrotas: " << times[escolha].getDerrotas() << endl;
+
 
                 } else {
                     try {

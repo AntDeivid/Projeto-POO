@@ -35,7 +35,14 @@ void menu_jogador() {
 }
 
 void menu_partida() {
-    //fazer
+    cout << "+=============================================+" << endl;
+    cout << "|(1) - Exibir placar                          |" << endl;
+    cout << "|(2) - Mostrar times                          |" << endl;
+    cout << "|(3) - Gol do time da casa                    |" << endl;
+    cout << "|(4) - Gol do time visitante                  |" << endl;
+    cout << "|(5) - Encerrar partida                       |" << endl;
+    cout << "+=============================================+" << endl;
+    cout << "Opcao: ";
 }
 
 void menu_saida() {
