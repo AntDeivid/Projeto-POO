@@ -11,7 +11,7 @@ void primeiro_menu() {
     cout << "|(4) - Visualizar time                        |" << endl;
     cout << "|(5) - Editar time                            |" << endl;
     cout << "|(6) - Iniciar Partida                        |" << endl;
-    cout << "|(7) - Pesquisar partidas                     |" << endl;
+    cout << "|(7) - Historico de  partidas                 |" << endl;
     cout << "|(8) - Sair                                   |" << endl;
     cout << "+=============================================+" << endl;
     cout << "Opcao: ";

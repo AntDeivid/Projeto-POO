@@ -266,9 +266,22 @@ int main() {
             case 6: {
                 // iniciar partida
                 menu_partida();
+                
             }
             case 7: {
-                
+                // le os resultados das partidas vindo do arquivo
+                ifstream arquivo;
+                arquivo.open("partidas.txt");
+                if (arquivo.is_open()) {
+                    string linha;
+                    while (getline(arquivo, linha)) {
+                        cout << linha << endl;
+                    }
+                } else {
+                    cout << "Nao foi possivel abrir o arquivo" << endl;
+                }
+                arquivo.close();
+                break;
             }
             case 8: {
                 // sair
