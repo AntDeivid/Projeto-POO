@@ -23,7 +23,7 @@ void elenco_flamengo(Time *time){
 
 void elenco_palmeiras(Time *time){
     Goleiro *goleiro = new Goleiro("Weverton", 20, 100, 0, 01, 150, 1.70);
-    JogadorDefesa *zaga1 = new JogadorDefesa("Gustavo Gómez", 20, 120, 54, 15, 87, 65);
+    JogadorDefesa *zaga1 = new JogadorDefesa("Gustavo Gomez", 20, 120, 54, 15, 87, 65);
     JogadorDefesa *zaga2 = new JogadorDefesa("Luan", 20, 120, 32, 4, 76, 50);
     JogadorAtacante *ataque1 = new JogadorAtacante("Dudu", 20, 120, 278, 7, 84, 90);
     JogadorAtacante *ataque2 = new JogadorAtacante("Deyverson", 20, 120, 241, 21, 76, 80);
@@ -51,9 +51,9 @@ void elenco_saopaulo(Time *time){
 
 void elenco_ceara(Time *time){
     Goleiro *goleiro = new Goleiro("Richard", 20, 120, 105, 01, 999999, 1.70);
-    JogadorDefesa *zaga1 = new JogadorDefesa("Luiz Otávio", 20, 120, 54, 69, 87, 65);
+    JogadorDefesa *zaga1 = new JogadorDefesa("Luiz Otavio", 20, 120, 54, 69, 87, 65);
     JogadorDefesa *zaga2 = new JogadorDefesa("Fabinho", 20, 120, 32, 24, 76, 50);
-    JogadorAtacante *ataque1 = new JogadorAtacante("Vinícius", 20, 120, 278, 10, 84, 90);
+    JogadorAtacante *ataque1 = new JogadorAtacante("Vinicius", 20, 120, 278, 10, 84, 90);
     JogadorAtacante *ataque2 = new JogadorAtacante("Felipe Azevedo", 20, 120, 241, 11, 76, 80);
 
     time->insJogadores(goleiro);

@@ -36,6 +36,7 @@ void Time::setEmpates(int empates){ this-> empates = empates; }
 
 void Time::printJogadores(){
 
+    cout << endl;
     cout << "Goleiros: " << endl;
     cout << "------------------------------------------------------------" << endl;
     for (int i = 0; i < jogador.size(); i++){
@@ -45,6 +46,7 @@ void Time::printJogadores(){
         }
     }
 
+    cout << "+=============================================+" << endl;
     cout << "Defensores: " << endl;
     cout << "------------------------------------------------------------" << endl;
     for (int i = 0; i < jogador.size(); i++) {
@@ -54,6 +56,7 @@ void Time::printJogadores(){
         }
     }
 
+    cout << "+=============================================+" << endl;
     cout << "Atacantes: " << endl;
     cout << "------------------------------------------------------------" << endl;
     for (int i = 0; i < jogador.size(); i++) {

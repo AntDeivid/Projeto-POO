@@ -18,6 +18,7 @@ void primeiro_menu() {
 }
 
 void menu_editar() {
+    system("clear || cls");
     cout << "+=============================================+" << endl;
     cout << "|(1) - Editar jogador                         |" << endl;
     cout << "|(2) - Editar nome do time                    |" << endl;
@@ -26,6 +27,7 @@ void menu_editar() {
 }
 
 void menu_jogador() {
+    system("clear || cls");
     cout << "+=============================================+" << endl;
     cout << "|(1) - Editar nome                            |" << endl;
     cout << "|(2) - Editar idade                           |" << endl;

@@ -47,7 +47,6 @@ int main() {
     vector < Time* > times;
 
     do {
-        system("cls || clear");
         primeiro_menu();
         cin >> opcao;
         cout << endl;
@@ -130,7 +129,7 @@ int main() {
                     }
                 }
 
-                system("cls || clear");
+    
                 break;
             }
             case 3: {
@@ -157,7 +156,7 @@ int main() {
                     cout << "Escolha qual time deseja visualizar: ";
                     int escolha;
                     cin >> escolha;
-
+                    system ("clear || cls");
                     if (escolha >= 0 && escolha < times.size()) {
 
                         cout << "+=============================================+" << endl;
@@ -425,7 +424,6 @@ int main() {
                 cout << "Opcao invalida" << endl;
                 break;
         }
-        system("cls || clear");
     } while (opcao != 8);
     return 0;
 }
