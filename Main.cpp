@@ -353,14 +353,14 @@ int main() {
 
                             case 5: {
                                 cout << "Apita o arbitro, finaaaaaal de jogo!!!!!!!!!" << endl;
-                                if (partida->golCasa() > partida->golVisitante()) {
+                                if (partida->getGolsCasa() > partida->getGolsVisitante()) {
                                     // salva o placar da partida no vetor de partidas do time da casa e do visitante
                                     times[timeCasa]->somaVitorias();
                                     times[timeVisitante]->somaDerrotas();
                                     // salva o placar da partida no arquivo de partidas
                                     escreveArquivo(partida);    
 
-                                } else if (partida->golCasa() < partida->golVisitante()) {
+                                } else if (partida->getGolsCasa() < partida->getGolsVisitante()) {
                                     times[timeVisitante]->somaVitorias();
                                     times[timeCasa]->somaDerrotas();
                                     // salva o placar da partida no arquivo de partidas

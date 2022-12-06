@@ -20,10 +20,10 @@ class Partidas {
         Time* gettimeVisitante() { return this->timeVisitante; }
         std::string getPlacar();
         Date getData() { return *data; }
-
         int golCasa();
-
         int golVisitante();
+        int getGolsCasa() { return this->placarCasa; }
+        int getGolsVisitante() { return this->placarVisitante; }
 };
 
 
