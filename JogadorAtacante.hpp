@@ -16,6 +16,11 @@ class JogadorAtacante : public Jogador {
         JogadorAtacante() = default;
         JogadorAtacante(std::string, int, int, int, int, int, int);
         int getHabilidade();
+        int getVelocidade();
+        void setVelocidade(int velocidade);
+        int getTecnica();
+        void setTecnica(int tecnica);
+        void print();
         std::string getId() { return this->id; }
 
 };

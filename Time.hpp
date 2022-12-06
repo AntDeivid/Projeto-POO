@@ -1,10 +1,13 @@
 #ifndef TIME_HPP
 #define TIME_HPP
-#include "Jogador.hpp"
 #include <iostream>
 #include <sstream>
 #include <vector>
 #include <typeinfo>
+#include "Jogador.hpp"
+#include "JogadorGoleiro.hpp"
+#include "JogadorDefesa.hpp"
+#include "JogadorAtacante.hpp"
 
 class Time : public Jogador{
     private:

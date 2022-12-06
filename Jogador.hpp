@@ -24,7 +24,13 @@ class Jogador {
         int getIdade();
         void setIdade(int idade);
         virtual std::string getId();
-
+        virtual void print() {
+        cout << "Nome: " << getNome()
+            << " | Idade: " << getIdade()
+            << " | Habilidade: " << getHabilidade()
+            << " | Gols: " << getGols()
+            << " | Camisa: " << getCamisa();
+        }
 };
 
 #endif // JOGADOR_HPP

@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Time.hpp"
 #include <iostream>
 #include <sstream>
 #include <vector>
 #include <typeinfo>
+#include "Time.hpp"
 
 using namespace std;
 
@@ -40,35 +40,23 @@ void Time::printJogadores(){
     cout << "------------------------------------------------------------" << endl;
     for (int i = 0; i < jogador.size(); i++){
         if (jogador[i]->getId() == "goleiro") {
-            cout << "Nome: " << jogador[i]->getNome()
-                << " | Idade: " << jogador[i]->getIdade()
-                << " | Habilidade: " << jogador[i]->getHabilidade()
-                << " | Gols: " << jogador[i]->getGols()
-                << " | Camisa: " << jogador[i]->getCamisa() << endl;
+            jogador[i]->print();
         }
     }
 
     cout << "Defensores: " << endl;
     cout << "------------------------------------------------------------" << endl;
     for (int i = 0; i < jogador.size(); i++) {
-    if (jogador[i]->getId() == "defesa") {
-            cout << "Nome: " << jogador[i]->getNome()
-                << " | Idade: " << jogador[i]->getIdade()
-                << " | Habilidade: " << jogador[i]->getHabilidade()
-                << " | Gols: " << jogador[i]->getGols()
-                << " | Camisa: " << jogador[i]->getCamisa() << endl;
+        if (jogador[i]->getId() == "defesa") {
+            jogador[i]->print();
         }
     }
 
     cout << "Atacantes: " << endl;
     cout << "------------------------------------------------------------" << endl;
     for (int i = 0; i < jogador.size(); i++) {
-    if (jogador[i]->getId() == "atacante") {
-            cout << "Nome: " << jogador[i]->getNome()
-                << " | Idade: " << jogador[i]->getIdade()
-                << " | Habilidade: " << jogador[i]->getHabilidade()
-                << " | Gols: " << jogador[i]->getGols()
-                << " | Camisa: " << jogador[i]->getCamisa() << endl;
+        if (jogador[i]->getId() == "atacante") {
+            jogador[i]->print();
         }
     }
 }

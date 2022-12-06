@@ -26,3 +26,9 @@ void Goleiro::setReflexos(int reflexos){
 int Goleiro::getHabilidade(){
     return ((Jogador::getHabilidade()*5)+ (((int)(this->altura*100))*2) + (this->reflexos*3))/10;
 }
+
+void Goleiro::print(){
+    Jogador::print();
+    cout << " | Reflexo: " << getReflexos()
+         << " | Altura: " << getAltura() << endl;
+}
