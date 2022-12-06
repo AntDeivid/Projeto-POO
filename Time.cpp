@@ -71,27 +71,15 @@ void Time::insJogadores(Jogador *jog){
     jogador.push_back(jog);
 }
 
-int Time::somaVitorias(){
-    int vit = getVitorias();
-    setVitorias(vit+1);
-    return getVitorias();   
-}
+void Time::somaVitorias(){ this->vitorias++; }
 
-int Time::somaDerrotas(){
-    int der = getDerrotas();
-    setDerrotas(der+1);
-    return getDerrotas();
-}
+void Time::somaDerrotas(){ this->derrotas++; }
 
-int Time::somaEmpates(){
-    int emp = getEmpates();
-    setEmpates(emp+1);
-    return getEmpates();
-}
+void Time::somaEmpates(){ this->empates++; }
 
 string Time::getResultados(){
     stringstream ss;
-    ss << "Vitorias: " << somaVitorias() << ", Empates: " << somaEmpates() << ", Derrotas: " << somaDerrotas() << endl;
+    ss << "Vitorias: " << getVitorias() << ", Empates: " << getEmpates() << ", Derrotas: " << getDerrotas() << endl;
     return ss.str();
 }
 

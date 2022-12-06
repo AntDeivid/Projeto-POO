@@ -110,6 +110,8 @@ int main() {
                     cout << i << " - " << times[i]->getNome() << endl;
                 }
 
+                cout << endl;
+
                 if (!times.empty()) {
                     cout << "Escolha qual time deseja remover: ";
                     int apagarTime;
@@ -152,6 +154,9 @@ int main() {
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
+
+                    cout << endl;
+
                     cout << "Escolha qual time deseja visualizar: ";
                     int escolha;
                     cin >> escolha;
@@ -206,6 +211,9 @@ int main() {
                                 for (int i = 0; i < jogadores.size(); i++) {
                                     cout << i << " - " << jogadores[i]->getNome() << endl;
                                 }
+
+                                cout << endl;
+                                
                                 cout << "Escolha qual jogador deseja editar: " << endl;
                                 int jogadorEscolhido;
                                 cin >> jogadorEscolhido;
@@ -296,6 +304,9 @@ int main() {
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
+
+                    cout << endl;
+
                     cin >> timeCasa >> timeVisitante;
 
                     cout << "Informe a data da partida (dd mm aa): " << endl;
@@ -325,10 +336,12 @@ int main() {
                                 // marca gol para o time da casa
                                 vector<Jogador*> jogadores = times[timeCasa]->getJogadores();
 
-                                cout << "Selecione o jogador que ira marcar o gol: " << endl;
+                                cout << "Selecione o jogador que ira marcar o gol: " << endl << endl;
                                 for (int i = 0; i < jogadores.size(); i++) {
                                     cout << i << " - " << jogadores[i]->getNome() << endl;
                                 }
+
+                                cout << endl;
 
                                 int goleador;
                                 cin >> goleador;
@@ -343,10 +356,12 @@ int main() {
                                 // marca gol para o time visitante
                                 vector<Jogador*> jogadores = times[timeVisitante]->getJogadores();
 
-                                cout << "Selecione o jogador que ira marcar o gol: " << endl;
+                                cout << "Selecione o jogador que ira marcar o gol: " << endl << endl;
                                 for (int i = 0; i < jogadores.size(); i++) {
                                     cout << i << " - " << jogadores[i]->getNome() << endl;
                                 }
+
+                                cout << endl;
 
                                 int goleador;
                                 cin >> goleador;
@@ -423,7 +438,6 @@ int main() {
                 cout << "Opcao invalida" << endl;
                 break;
         }
-        system("cls || clear");
     } while (opcao != 8);
     return 0;
 }
