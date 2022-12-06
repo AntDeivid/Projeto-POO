@@ -47,6 +47,7 @@ int main() {
     vector < Time* > times;
 
     do {
+        system("cls || clear");
         primeiro_menu();
         cin >> opcao;
         cout << endl;
@@ -54,7 +55,7 @@ int main() {
         switch (opcao) {
             case 1: {
                 // criar um time
-                cout << "Escolha qual time deseja criar (Flamengo, Palmeiras, SaoPaulo e Ceara): " << endl;
+                cout << "Escolha qual time deseja criar (Flamengo, Palmeiras, SaoPaulo e Ceara): ";
                 string nome;
                 cin >> nome;
 
@@ -102,6 +103,7 @@ int main() {
                     }
                 }
 
+                system("cls");
                 break;
             }
             case 2: {
@@ -127,6 +129,8 @@ int main() {
                         cerr << msg << endl;
                     }
                 }
+
+                system("cls || clear");
                 break;
             }
             case 3: {
@@ -146,7 +150,7 @@ int main() {
             }
             case 4: {
                 // visualizar time com seus jogadores
-                if (verifica_flamengo == 1 || verifica_palmeiras == 1 || verifica_saopaulo == 1 || verifica_ceara == 1){
+                if (!times.empty()){
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
@@ -184,7 +188,7 @@ int main() {
             }
             case 5: {
                 // editar time
-                if (verifica_flamengo == 1 || verifica_palmeiras == 1 || verifica_saopaulo == 1 || verifica_ceara == 1){
+                if (!times.empty()){
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
@@ -365,7 +369,7 @@ int main() {
                                     // salva o placar da partida no arquivo de partidas
                                     escreveArquivo(partida);    
 
-                                } else if (partida->getGolsCasa() < partida->getGolsVisitante()) {
+                                } else if (partida->getGolsCasa() < partida->getGolsVisitante ()) {
                                     times[timeVisitante]->somaVitorias();
                                     times[timeCasa]->somaDerrotas();
                                     // salva o placar da partida no arquivo de partidas
@@ -421,6 +425,7 @@ int main() {
                 cout << "Opcao invalida" << endl;
                 break;
         }
+        system("cls || clear");
     } while (opcao != 8);
     return 0;
 }
