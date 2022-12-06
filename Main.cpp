@@ -50,7 +50,7 @@ int main() {
         switch (opcao) {
             case 1: {
                 // criar um time
-                cout << "Escolha qual time deseja criar (Flamengo, Palmeiras, SaoPaulo e Ceara): " << endl;
+                cout << "Escolha qual time deseja criar (Flamengo, Palmeiras, SaoPaulo e Ceara): ";
                 string nome;
                 cin >> nome;
 
@@ -98,6 +98,7 @@ int main() {
                     }
                 }
 
+                system("cls || clear");
                 break;
             }
             case 2: {
@@ -106,8 +107,8 @@ int main() {
                     cout << i << " - " << times[i]->getNome() << endl;
                 }
 
-                if (verifica_flamengo == 1 || verifica_palmeiras == 1 || verifica_saopaulo == 1 || verifica_ceara == 1) {
-                    cout << "Escolha qual time deseja remover: " << endl;
+                if (!times.empty()) {
+                    cout << "Escolha qual time deseja remover: ";
                     int apagarTime;
                     cin >> apagarTime;
                     
@@ -125,6 +126,8 @@ int main() {
                         cerr << msg << endl;
                     }
                 }
+
+                system("cls || clear");
                 break;
             }
             case 3: {
@@ -144,7 +147,7 @@ int main() {
             }
             case 4: {
                 // visualizar time com seus jogadores
-                if (verifica_flamengo == 1 || verifica_palmeiras == 1 || verifica_saopaulo == 1 || verifica_ceara == 1){
+                if (!times.empty()){
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
@@ -159,7 +162,7 @@ int main() {
                         cout << "+=============================================+" << endl;
                         times[escolha]->printJogadores();
                         cout << "+=============================================+" << endl;
-                        times[escolha]->getResultados();
+                        cout << times[escolha]->getResultados();
                         cout << "+=============================================+" << endl;
 
 
@@ -182,7 +185,7 @@ int main() {
             }
             case 5: {
                 // editar time
-                if (verifica_flamengo == 1 || verifica_palmeiras == 1 || verifica_saopaulo == 1 || verifica_ceara == 1){
+                if (!times.empty()){
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
@@ -305,7 +308,7 @@ int main() {
                         switch (opcaoPartida) {
                             case 1: {
                                 //Mostrar placar
-                                cout << partida->getPlacar();
+                                cout << partida->getPlacar() << endl;
                                 break;
                             }
 
@@ -360,7 +363,7 @@ int main() {
                                     // salva o placar da partida no arquivo de partidas
                                     escreveArquivo(partida);    
 
-                                } else if (partida->getGolsCasa() < partida->getGolsVisitante()) {
+                                } else if (partida->getGolsCasa() < partida->getGolsVisitante ()) {
                                     times[timeVisitante]->somaVitorias();
                                     times[timeCasa]->somaDerrotas();
                                     // salva o placar da partida no arquivo de partidas
