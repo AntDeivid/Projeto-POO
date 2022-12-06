@@ -12,9 +12,33 @@ class Date {
     public:
         Date();
         Date(int dia, int mes, int ano) {
-            setDia(dia);
-            setAno(ano);
-            setMes(mes);
+            if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+                if (dia >=1 && dia <= 31) {
+                    setDia(dia);
+                    setMes(mes);
+                    setAno(ano);
+                } else {
+                    std::cerr << "Dia invalido" << std::endl;
+                }
+            } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+                if (dia >=1 && dia <= 30) {
+                    setDia(dia);
+                    setMes(mes);
+                    setAno(ano);
+                } else {
+                    std::cerr << "Dia invalido" << std::endl;
+                }   
+            } else if (mes == 2) {
+                if (dia >= 1 && dia <= 28) {
+                    setDia(dia);
+                    setMes(mes);
+                    setAno(ano);
+                } else {
+                    std::cerr << "Dia invalido" << std::endl;
+                }
+            } else {
+                std::cerr << "Mes invalido" << std::endl;
+            }
         }
 
         int getDia() { return this->dia; }

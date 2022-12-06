@@ -20,6 +20,7 @@ void escreveArquivo(Partidas *partida) {
     arquivo << partida->getData().strPrint() << endl;
     arquivo << "Placar do jogo: ";
     arquivo << partida->getPlacar() << endl;
+    arquivo << "+=============================================+" << endl;
     arquivo.close();
     
 }
