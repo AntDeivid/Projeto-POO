@@ -8,16 +8,16 @@ class Partidas {
 
     private:
         Date *data;
-        Time timeCasa, timeVisitante;
+        Time *timeCasa, *timeVisitante;
         int placarCasa, placarVisitante;
 
     public:
-        Partidas(Date *data, Time, Time);
+        Partidas(Date *data, Time*, Time*);
 
         std::string getCasa();
-        Time gettimeCasa() { return this->timeCasa; }
+        Time* gettimeCasa() { return this->timeCasa; }
         std::string getVisitante();
-        Time gettimeVisitante() { return this->timeVisitante; }
+        Time* gettimeVisitante() { return this->timeVisitante; }
         std::string getPlacar();
         Date getData() { return *data; }
 

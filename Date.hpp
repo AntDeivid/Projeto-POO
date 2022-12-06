@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 
 class Date {
 
@@ -26,6 +27,12 @@ class Date {
         void setAno(int ano) { this->ano = ano; }
 
         void print() { std::cout << this->getDia() << "/" << this->getMes() << "/" << this->getAno() << std::endl; }
+
+        std::string strPrint() {
+            std::stringstream ss;
+            ss << getDia() << "/" << getMes() << "/" << getAno();
+            return ss.str();
+        }
 
 };
 #endif // DATE_HPP

@@ -9,7 +9,7 @@
 class Time : public Jogador{
     private:
         std::string nome;
-        std::vector <Jogador> jogador;
+        std::vector <Jogador*> jogador;
         int numJog{0};
         int vitorias{0};
         int derrotas{0};
@@ -25,7 +25,7 @@ class Time : public Jogador{
         int somaDerrotas();
         int somaEmpates();
         void insJogadores(Jogador *jog);
-        std::vector<Jogador> getJogadores();
+        std::vector<Jogador*> getJogadores();
         void setVitorias(int vitorias);
         void setEmpates(int empates);
         void setDerrotas(int derrotas);
