@@ -117,7 +117,7 @@ int main() {
                         }
                     }
                 }
-                
+
                 else {
                     try {
                         throw "Nao e possivel remover um time, pois nao existe nenhum time!";
@@ -281,7 +281,8 @@ int main() {
             case 6: {
                 // iniciar partida
                 // verifica se há dois times cadastrados
-                if (verifica_flamengo == 1 && verifica_palmeiras == 1 || verifica_flamengo == 1 && verifica_saopaulo == 1 || verifica_flamengo == 1 && verifica_ceara == 1 || verifica_palmeiras == 1 && verifica_saopaulo == 1 || verifica_palmeiras == 1 && verifica_ceara == 1 || verifica_saopaulo == 1 && verifica_ceara == 1) {                
+                if (verifica_flamengo == 1 && verifica_palmeiras == 1 || verifica_flamengo == 1 && verifica_saopaulo == 1 || verifica_flamengo == 1 && verifica_ceara == 1 || verifica_palmeiras == 1 && verifica_saopaulo == 1 || verifica_palmeiras == 1 && verifica_ceara == 1 || verifica_saopaulo == 1 && verifica_ceara == 1) { 
+
                     int timeCasa, timeVisitante, dia, mes, ano;
 
                     cout << "Selecione os times para a partida (a primeira escolha eh o time da casa): " << endl;
@@ -303,12 +304,13 @@ int main() {
 
                         switch (opcaoPartida) {
                             case 1: {
+                                //Mostrar placar
                                 cout << partida->getPlacar();
                                 break;
                             }
 
                             case 2: {
-                                cout << "Casa: " << partida->getCasa() << endl << "Visitante: " << partida->getVisitante() << endl;
+                                cout << "Casa: " << partida->getCasa() << endl << "Visitante: " << partida->getVisitante() << endl << endl;
                                 break;
                             }
                             

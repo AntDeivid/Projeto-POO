@@ -9,7 +9,7 @@ class Partidas {
     private:
         Date *data;
         Time *timeCasa, *timeVisitante;
-        int placarCasa, placarVisitante;
+        int placarCasa{0}, placarVisitante{0};
 
     public:
         Partidas(Date *data, Time*, Time*);

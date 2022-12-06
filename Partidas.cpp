@@ -23,12 +23,10 @@ std::string Partidas::getPlacar() {
 }
 
 int Partidas::golCasa() { 
-    placarCasa = 0;
     this->placarCasa++; 
     return placarCasa;
 }
 int Partidas::golVisitante() { 
-    placarVisitante = 0;
     this->placarVisitante++; 
     return placarVisitante;
 }
