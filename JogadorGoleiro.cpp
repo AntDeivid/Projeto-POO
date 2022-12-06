@@ -8,7 +8,7 @@ Goleiro::Goleiro(string nome, int idade, int habilidade, int gols, int camisa, i
 }
 
 float Goleiro::getAltura(){
-    return altura;
+    return this->altura;
 }
 
 void Goleiro::setAltura(float altura){

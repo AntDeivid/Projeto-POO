@@ -25,7 +25,7 @@ class Jogador {
         void setIdade(int idade);
         virtual std::string getId();
         virtual void print() {
-        cout << "Nome: " << getNome()
+        std::cout << "Nome: " << getNome()
             << " | Idade: " << getIdade()
             << " | Habilidade: " << getHabilidade()
             << " | Gols: " << getGols()

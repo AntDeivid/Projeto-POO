@@ -17,10 +17,6 @@ class Goleiro: public Jogador{
         float getAltura();
         void setAltura(float altura);
         int getHabilidade();
-        float getAltura();
-        void setAltura(float altura);
-        int getReflexos();
-        void setReflexos(int reflexos);
         void print();
         std::string getId() { return this->id; }
 };
