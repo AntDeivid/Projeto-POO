@@ -110,7 +110,7 @@ int main() {
                 }
 
                 if (!times.empty()) {
-                    cout << "Escolha qual time deseja remover: " << endl;
+                    cout << "Escolha qual time deseja remover: ";
                     int apagarTime;
                     cin >> apagarTime;
                     
@@ -149,7 +149,7 @@ int main() {
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
-                    cout << "Escolha qual time deseja visualizar: " << endl;
+                    cout << "Escolha qual time deseja visualizar: ";
                     int escolha;
                     cin >> escolha;
 
@@ -187,7 +187,7 @@ int main() {
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
-                    cout << "Escolha qual time deseja editar: " << endl;
+                    cout << "Escolha qual time deseja editar: ";
                     int escolha;
                     cin >> escolha;
                     
