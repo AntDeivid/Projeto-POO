@@ -376,7 +376,7 @@ int main() {
 
                             case 4: {
                                 // marca gol para o time visitante
-                                vector<Jogador*> jogadores = times[timeCasa]->getJogadores();
+                                vector<Jogador*> jogadores = times[timeVisitante]->getJogadores();
 
                                 cout << "Selecione o jogador que ira marcar o gol: " << endl;
                                 for (int i = 0; i < jogadores.size(); i++) {
