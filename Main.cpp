@@ -16,11 +16,10 @@ using namespace std;
 void escreveArquivo(Partidas *partida) {
     ofstream arquivo;
     arquivo.open("partidas.txt", ios::app);
-    cout << "Data da partida: ";
+    arquivo << "Data da partida: ";
     arquivo << partida->getData().strPrint() << endl;
-    cout << "Placar do jogo: ";
+    arquivo << "Placar do jogo: ";
     arquivo << partida->getPlacar() << endl;
-
     arquivo.close();
     
 }
@@ -110,7 +109,7 @@ int main() {
                     cout << i << " - " << times[i]->getNome() << endl;
                 }
 
-                if (verifica_flamengo == 1 || verifica_palmeiras == 1 || verifica_saopaulo == 1 || verifica_ceara == 1) {
+                if (!times.empty()) {
                     cout << "Escolha qual time deseja remover: " << endl;
                     int apagarTime;
                     cin >> apagarTime;
@@ -120,9 +119,7 @@ int main() {
                             times.erase(times.begin() + i);
                         }
                     }
-                }
-
-                else {
+                } else {
                     try {
                         throw "Nao e possivel remover um time, pois nao existe nenhum time!";
                     } catch (const char* msg) {
@@ -163,7 +160,7 @@ int main() {
                         cout << "+=============================================+" << endl;
                         times[escolha]->printJogadores();
                         cout << "+=============================================+" << endl;
-                        times[escolha]->getResultados();
+                        cout << times[escolha]->getResultados();
                         cout << "+=============================================+" << endl;
 
 
@@ -312,7 +309,7 @@ int main() {
                         switch (opcaoPartida) {
                             case 1: {
                                 //Mostrar placar
-                                cout << partida->getPlacar();
+                                cout << partida->getPlacar() << endl;
                                 break;
                             }
 
