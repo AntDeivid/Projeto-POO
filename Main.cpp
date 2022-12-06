@@ -46,6 +46,7 @@ int main() {
     vector < Time* > times;
 
     do {
+        system("cls || clear");
         primeiro_menu();
         cin >> opcao;
         cout << endl;
@@ -101,7 +102,7 @@ int main() {
                     }
                 }
 
-                system("cls || clear");
+                system("cls");
                 break;
             }
             case 2: {
@@ -423,6 +424,7 @@ int main() {
                 cout << "Opcao invalida" << endl;
                 break;
         }
+        system("cls || clear");
     } while (opcao != 8);
     return 0;
 }
