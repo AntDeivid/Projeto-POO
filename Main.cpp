@@ -16,7 +16,11 @@ using namespace std;
 void escreveArquivo(Partidas *partida) {
     ofstream arquivo;
     arquivo.open("partidas.txt", ios::app);
+    cout << "Data da partida: ";
+    arquivo << partida->getData().strPrint() << endl;
+    cout << "Placar do jogo: ";
     arquivo << partida->getPlacar() << endl;
+
     arquivo.close();
     
 }
@@ -213,6 +217,7 @@ int main() {
                                 
                                 switch(opcaoJogador) {
                                     case 1: {
+                                        cout << "Digite o novo nome do jogador: " << endl;
                                         string novoNome;
                                         cin >> novoNome;
                                         jogadores[jogadorEscolhido]->setNome(novoNome);
@@ -221,6 +226,7 @@ int main() {
                                     }
 
                                     case 2: {
+                                        cout << "Digite a nova idade do jogador: " << endl;
                                         int novaIdade;
                                         cin >> novaIdade;
                                         jogadores[jogadorEscolhido]->setIdade(novaIdade);
@@ -229,6 +235,7 @@ int main() {
                                     }
 
                                     case 3: {
+                                        cout << "Digite o novo numero da camisa do jogador: " << endl;
                                         int novaCamisa;
                                         cin >> novaCamisa;
                                         jogadores[jogadorEscolhido]->setCamisa(novaCamisa);
