@@ -41,6 +41,7 @@ void Time::printJogadores(){
     for (int i = 0; i < jogador.size(); i++){
         if (jogador[i]->getId() == "goleiro") {
             jogador[i]->print();
+            cout << endl;
         }
     }
 
@@ -49,6 +50,7 @@ void Time::printJogadores(){
     for (int i = 0; i < jogador.size(); i++) {
         if (jogador[i]->getId() == "defesa") {
             jogador[i]->print();
+            cout << endl;
         }
     }
 
@@ -57,6 +59,7 @@ void Time::printJogadores(){
     for (int i = 0; i < jogador.size(); i++) {
         if (jogador[i]->getId() == "atacante") {
             jogador[i]->print();
+            cout << endl;
         }
     }
 }

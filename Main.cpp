@@ -16,6 +16,9 @@ using namespace std;
 void escreveArquivo(Partidas *partida) {
     ofstream arquivo;
     arquivo.open("partidas.txt", ios::app);
+    arquivo << "Data da partida: ";
+    arquivo << partida->getData().strPrint() << endl;
+    arquivo << "Placar do jogo: ";
     arquivo << partida->getPlacar() << endl;
     arquivo.close();
     
@@ -117,9 +120,7 @@ int main() {
                             times.erase(times.begin() + i);
                         }
                     }
-                }
-
-                else {
+                } else {
                     try {
                         throw "Nao e possivel remover um time, pois nao existe nenhum time!";
                     } catch (const char* msg) {
@@ -151,7 +152,7 @@ int main() {
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
-                    cout << "Escolha qual time deseja visualizar: " << endl;
+                    cout << "Escolha qual time deseja visualizar: ";
                     int escolha;
                     cin >> escolha;
 
@@ -189,7 +190,7 @@ int main() {
                     for (int i = 0; i < times.size(); i++) {
                         cout << i << " - " << times[i]->getNome() << endl;
                     }
-                    cout << "Escolha qual time deseja editar: " << endl;
+                    cout << "Escolha qual time deseja editar: ";
                     int escolha;
                     cin >> escolha;
                     
@@ -216,6 +217,7 @@ int main() {
                                 
                                 switch(opcaoJogador) {
                                     case 1: {
+                                        cout << "Digite o novo nome do jogador: " << endl;
                                         string novoNome;
                                         cin >> novoNome;
                                         jogadores[jogadorEscolhido]->setNome(novoNome);
@@ -224,6 +226,7 @@ int main() {
                                     }
 
                                     case 2: {
+                                        cout << "Digite a nova idade do jogador: " << endl;
                                         int novaIdade;
                                         cin >> novaIdade;
                                         jogadores[jogadorEscolhido]->setIdade(novaIdade);
@@ -232,6 +235,7 @@ int main() {
                                     }
 
                                     case 3: {
+                                        cout << "Digite o novo numero da camisa do jogador: " << endl;
                                         int novaCamisa;
                                         cin >> novaCamisa;
                                         jogadores[jogadorEscolhido]->setCamisa(novaCamisa);
