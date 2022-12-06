@@ -102,67 +102,23 @@ int main() {
             }
             case 2: {
                 // remover um time
-                    if (verifica_flamengo == 1 || verifica_palmeiras == 1 || verifica_saopaulo == 1 || verifica_ceara == 1) {
-                    cout << "Escolha qual time deseja remover (Flamengo, Palmeiras, São Paulo e Ceara): " << endl;
-                    string nome;
-                    cin >> nome;
+                for (int i = 0; i < times.size(); i++) {
+                    cout << i << " - " << times[i]->getNome() << endl;
+                }
 
-                    if (nome == "Flamengo"){
-                        if (verifica_flamengo == 1) {
-
-                            for (int i = 0; i < times.size(); i++) {
-                                if (times[i]->getNome() == nome) {
-                                    times.erase(times.begin() + i);
-                                }
-                            }
-                            verifica_flamengo = 0;
-                        } else {
-                            cout << "Time nao existe" << endl;
-                        }
-                    } else if (nome == "Palmeiras") {
-                        if (verifica_palmeiras == 1) {
-
-                            for (int i = 0; i < times.size(); i++) {
-                                if (times[i]->getNome() == nome) {
-                                    times.erase(times.begin() + i);
-                                }
-                            }
-                            verifica_palmeiras = 0;
-                        } else {
-                            cout << "Time nao existe" << endl;
-                        }
-                    } else if (nome == "São Paulo") {
-                        if (verifica_saopaulo == 1) {
-
-                            for (int i = 0; i < times.size(); i++) {
-                                if (times[i]->getNome() == nome) {
-                                    times.erase(times.begin() + i);
-                                }
-                            }
-                            verifica_saopaulo = 0;
-                        } else {
-                            cout << "Time nao existe" << endl;
-                        }
-                    } else if (nome == "Ceara") {
-                        if (verifica_ceara == 1) {
-
-                            for (int i = 0; i < times.size(); i++) {
-                                if (times[i]->getNome() == nome) {
-                                    times.erase(times.begin() + i);
-                                }
-                            }
-                            verifica_ceara = 0;
-                        } else {
-                            cout << "Time nao existe" << endl;
-                        }
-                    } else {
-                        try {
-                            throw "Nao e possivel remover esse time, pois nao existe!";
-                        } catch (const char* msg) {
-                            cerr << msg << endl;
+                if (verifica_flamengo == 1 || verifica_palmeiras == 1 || verifica_saopaulo == 1 || verifica_ceara == 1) {
+                    cout << "Escolha qual time deseja remover: " << endl;
+                    int apagarTime;
+                    cin >> apagarTime;
+                    
+                    for (int i = 0; i < times.size(); i++) {
+                        if (times[i] == times[apagarTime]) {
+                            times.erase(times.begin() + i);
                         }
                     }
-                } else {
+                }
+                
+                else {
                     try {
                         throw "Nao e possivel remover um time, pois nao existe nenhum time!";
                     } catch (const char* msg) {
