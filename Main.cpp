@@ -102,7 +102,6 @@ int main() {
                     }
                 }
 
-                system("cls");
                 break;
             }
             case 2: {
@@ -129,7 +128,7 @@ int main() {
                     }
                 }
 
-    
+                system("cls || clear");
                 break;
             }
             case 3: {
@@ -424,6 +423,7 @@ int main() {
                 cout << "Opcao invalida" << endl;
                 break;
         }
+        system("cls || clear");
     } while (opcao != 8);
     return 0;
 }
