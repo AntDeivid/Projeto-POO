@@ -1,15 +1,7 @@
-11/11/11
-Palmeiras 1 X 1 Flamengo
-11/11/11
-Flamengo 1 X 1 Palmeiras
-11/11/11
-Flamengo 1 X 1 Palmeiras
-11/11/11
-Flamengo 1 X 1 Palmeiras
-Flamengo empatou com Palmeiras
-11/11/11
-Flamengo 1 X 1 Palmeiras
-Flamengo empatou com Palmeiras
-11/1/1
-Palmeiras 1 X 1 Fortaleza
-Palmeiras empatou com Fortaleza
+
+Vitorias: 1, Empates: 0, Derrotas: 0
+
++=============================================+
+Vitorias: 0, Empates: 0, Derrotas: 1
+
++=============================================+

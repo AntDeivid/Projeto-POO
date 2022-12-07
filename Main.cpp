@@ -22,7 +22,15 @@ void escreveArquivo(Partidas *partida) {
     arquivo << partida->getPlacar() << endl;
     arquivo << "+=============================================+" << endl;
     arquivo.close();
-    
+}
+
+// função para guardar as quantidades de vitórias, empates e derrotas de cada time
+void escreveArquivo2(Time *time) {
+    ofstream arquivo;
+    arquivo.open("resultados.txt", ios::app);
+    arquivo << time->getResultados() << endl;
+    arquivo << "+=============================================+" << endl;
+    arquivo.close();
 }
 
 // função para ler os resultados das partidas do arquivo
@@ -35,6 +43,17 @@ void leArquivo() {
     }
     arquivo.close();
 } 
+
+// função para ler as quantidades de vitórias, empates e derrotas de cada time do arquivo
+void leArquivo2() {
+    ifstream arquivo;
+    arquivo.open("resultados.txt");
+    string linha;
+    while (getline(arquivo, linha)) {
+        cout << linha << endl;
+    }
+    arquivo.close();
+}
 
 int verifica_flamengo = 0;
 int verifica_palmeiras = 0;
@@ -378,18 +397,26 @@ int main() {
                                     times[timeCasa]->somaVitorias();
                                     times[timeVisitante]->somaDerrotas();
                                     // salva o placar da partida no arquivo de partidas
-                                    escreveArquivo(partida);    
-
+                                    escreveArquivo(partida); 
+                                    // salva a quantidade de vitórias, derrotas e empates no arquivo de times
+                                    escreveArquivo2(times[timeCasa]);
+                                    escreveArquivo2(times[timeVisitante]);
                                 } else if (partida->getGolsCasa() < partida->getGolsVisitante ()) {
                                     times[timeVisitante]->somaVitorias();
                                     times[timeCasa]->somaDerrotas();
                                     // salva o placar da partida no arquivo de partidas
                                     escreveArquivo(partida);
+                                    // salva a quantidade de vitórias, derrotas e empates no arquivo de times
+                                    escreveArquivo2(times[timeCasa]);
+                                    escreveArquivo2(times[timeVisitante]);
                                 } else {
                                     times[timeCasa]->somaEmpates();
                                     times[timeVisitante]->somaEmpates();
                                     // salva o placar da partida no arquivo de partidas
                                     escreveArquivo(partida);
+                                    // salva a quantidade de vitórias, derrotas e empates no arquivo de times
+                                    escreveArquivo2(times[timeCasa]);
+                                    escreveArquivo2(times[timeVisitante]);
                                 }
                                 break;
                             }
