@@ -24,9 +24,9 @@ class Time : public Jogador{
         void setNome(std::string nome);
         std::string getResultados();
         void printJogadores();
-        int somaVitorias();
-        int somaDerrotas();
-        int somaEmpates();
+        void somaVitorias();
+        void somaDerrotas();
+        void somaEmpates();
         void insJogadores(Jogador *jog);
         std::vector<Jogador*> getJogadores();
         void setVitorias(int vitorias);
