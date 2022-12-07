@@ -78,41 +78,26 @@ int main() {
                 cin >> nome;
 
                 if (nome == "Flamengo") {
-                    if (verifica_flamengo == 0) {
-                        Time *time = new Time(nome);
-                        elenco_flamengo(time);
-                        times.push_back(time);
-                        verifica_flamengo = 1;
-                    } else {
-                        cout << "Time ja existe" << endl;
-                    }
+                    Time *time = new Time(nome);
+                    elenco_flamengo(time);
+                    times.push_back(time);
+                    verifica_flamengo = 1;
                 } else if (nome == "Palmeiras") {
-                    if (verifica_palmeiras == 0) {
-                        Time *time = new Time(nome);
-                        elenco_palmeiras(time);
-                        times.push_back(time);
-                        verifica_palmeiras = 1;
-                    } else {
-                        cout << "Time ja existe" << endl;
-                    }
+                    Time *time = new Time(nome);
+                    elenco_palmeiras(time);
+                    times.push_back(time);
+                    verifica_palmeiras = 1;
                 } else if (nome == "SaoPaulo") {
-                    if (verifica_saopaulo == 0) {
-                        Time *time = new Time(nome);
-                        elenco_saopaulo(time);
-                        times.push_back(time);
-                        verifica_saopaulo = 1;
-                    } else {
-                        cout << "Time ja existe" << endl;
-                    }
+                    Time *time = new Time(nome);
+                    elenco_saopaulo(time);
+                    times.push_back(time);
+                    verifica_saopaulo = 1;
+                
                 } else if (nome == "Ceara") {
-                    if (verifica_ceara == 0) {
-                        Time *time = new Time(nome);
-                        elenco_ceara(time);
-                        times.push_back(time);
-                        verifica_ceara = 1;
-                    } else {
-                        cout << "Time ja existe" << endl;
-                    }
+                    Time *time = new Time(nome);
+                    elenco_ceara(time);
+                    times.push_back(time);
+                    verifica_ceara = 1;
                 } else {
                     try {
                         throw "Nao e possivel criar esse time, pois nao existe!";
@@ -120,7 +105,6 @@ int main() {
                         cerr << msg << endl;
                     }
                 }
-
                 break;
             }
             case 2: {
