@@ -127,8 +127,6 @@ int main() {
                         cerr << msg << endl;
                     }
                 }
-
-                system("cls || clear");
                 break;
             }
             case 3: {
@@ -422,8 +420,7 @@ int main() {
             default:
                 cout << "Opcao invalida" << endl;
                 break;
-        }
-        system("cls || clear");
+        } 
     } while (opcao != 8);
     return 0;
 }
